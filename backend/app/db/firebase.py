@@ -42,16 +42,19 @@ def init_firebase() -> None:
 
 
 def get_firestore():
-    """Return the singleton Firestore client.
+    """Return the singleton Firestore client, initialising it on first use.
 
-    Raises RuntimeError if ``init_firebase()`` has not been called.
+    Retrying here means a transient or fixed-later config problem heals
+    without a restart; a persistent one raises with the real cause.
     """
     if _db is None:
-        raise RuntimeError(
-            "Firestore client is not initialised. "
-            "Ensure init_firebase() is called during application startup."
-        )
+        init_firebase()
     return _db
+
+
+def init_error_summary(exc: Exception) -> str:
+    """Short, secret-free description of an initialisation failure."""
+    return f"{type(exc).__name__}: {str(exc)[:120]}"
 
 
 async def firestore_dep() -> AsyncGenerator:
