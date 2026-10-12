@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work — KLYRIVEN | Digital Agency Portfolio</title>
+  <meta name="description" content="A curated selection of KLYRIVEN projects spanning smart evacuation systems, brand identity, web design, e-commerce, and digital strategy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://klyriven.com/portfolio.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://klyriven.com/portfolio.html" />
+  <meta property="og:title" content="Our Work — KLYRIVEN" />
+  <meta property="og:description" content="A curated selection of KLYRIVEN projects spanning smart evacuation systems, brand identity, web design, e-commerce, and digital strategy." />
+  <meta property="og:image" content="https://klyriven.com/assets/og-portfolio.jpg" />
+  <meta property="og:site_name" content="KLYRIVEN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Work — KLYRIVEN" />
+  <meta name="twitter:description" content="A curated selection of KLYRIVEN projects spanning smart evacuation systems, brand identity, web design, e-commerce, and digital strategy." />
+  <meta name="twitter:image" content="https://klyriven.com/assets/og-portfolio.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ NAVIGATION ═══ -->
+  <header>
+    <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="KLYRIVEN – home">
+          <span class="nav__wordmark">KLYRIVEN<span class="nav__wordmark-dot"></span></span>
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="portfolio.html" class="nav__link is-active" aria-current="page">Work</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="process.html" class="nav__link">Process</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+
+        <a href="contact.html" class="nav__cta">Start a project</a>
+
+        <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="nav-mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <ul class="nav__mobile-links" role="list">
+        <li><a href="index.html" class="nav__mobile-link">Home</a></li>
+        <li><a href="portfolio.html" class="nav__mobile-link is-active">Work</a></li>
+        <li><a href="services.html" class="nav__mobile-link">Services</a></li>
+        <li><a href="process.html" class="nav__mobile-link">Process</a></li>
+        <li><a href="about.html" class="nav__mobile-link">About</a></li>
+        <li><a href="contact.html" class="nav__mobile-link">Contact</a></li>
+      </ul>
+      <div class="nav__mobile-cta">
+        <a href="contact.html" class="btn btn--primary">Start a project</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════ PORTFOLIO HERO ═══════════ -->
+    <section class="portfolio-hero" aria-labelledby="portfolio-hero-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-header__label" style="margin-bottom: var(--space-8); display: inline-flex;">Our Work</span>
+          <h1 class="about-hero__title" id="portfolio-hero-title">
+            Where design, technology, and strategy converge.
+          </h1>
+          <p style="font-size: var(--text-md); line-height: var(--lh-relaxed); color: rgba(242,240,232,0.6); max-width: 52ch;">
+            A selection of projects where every detail serves a purpose and every outcome was earned through considered effort.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ FILTER TABS ════════════════ -->
+    <section class="section section--cream" aria-label="Portfolio filter and grid">
+      <div class="container">
+        <!-- Filter tabs -->
+        <div class="filter-tabs reveal" role="group" aria-label="Filter projects by category" style="margin-bottom: var(--space-12);">
+          <button class="filter-tab is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-tab" data-filter="smart-systems" aria-pressed="false">Smart Systems</button>
+          <button class="filter-tab" data-filter="brand-identity" aria-pressed="false">Brand Identity</button>
+          <button class="filter-tab" data-filter="web-design" aria-pressed="false">Web Design</button>
+          <button class="filter-tab" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+          <button class="filter-tab" data-filter="digital-strategy" aria-pressed="false">Digital Strategy</button>
+        </div>
+
+        <!-- Portfolio grid -->
+        <div class="portfolio-grid" id="portfolio-grid">
+
+          <!-- 01 Smart Evacuation System -->
+          <div class="reveal" data-category="smart-systems">
+            <a href="https://smart-evacuation-system-zf1z.onrender.com" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="View Smart Evac Command – Multi-Floor Evacuation System">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#111328"/>
+                    <rect x="50" y="40" width="460" height="320" rx="4" fill="none" stroke="#AFAEA2" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="50" y1="145" x2="510" y2="145" stroke="#AFAEA2" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.4"/>
+                    <line x1="50" y1="250" x2="510" y2="250" stroke="#AFAEA2" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.4"/>
+                    <text x="65" y="75" font-family="monospace" font-size="11" fill="#AFAEA2" opacity="0.7">FLOOR 02 // SENSORS ONLINE</text>
+                    <text x="65" y="180" font-family="monospace" font-size="11" fill="#AFAEA2" opacity="0.7">FLOOR 01 // EVAC STATUS: ACTIVE</text>
+                    <text x="65" y="285" font-family="monospace" font-size="11" fill="#AFAEA2" opacity="0.7">FLOOR 00 // GROUND EXIT CLEAR</text>
+                    <rect x="65" y="95" width="80" height="26" rx="3" fill="#1B1E4A" stroke="#AFAEA2" stroke-width="0.5" opacity="0.9"/>
+                    <circle cx="80" cy="108" r="4" fill="#2ECC71"/>
+                    <text x="92" y="112" font-family="monospace" font-size="9" fill="#F2F0E8">ZONE 2A</text>
+                    <path d="M 240 108 Q 280 85, 320 110 T 380 105 T 440 115 T 490 100" fill="none" stroke="#2ECC71" stroke-width="1.5" opacity="0.85"/>
+                    <rect x="65" y="200" width="80" height="26" rx="3" fill="#1B1E4A" stroke="#D21319" stroke-width="1" opacity="0.95"/>
+                    <circle cx="80" cy="213" r="4" fill="#D21319"/>
+                    <text x="92" y="217" font-family="monospace" font-size="9" fill="#F2F0E8">ZONE 1A</text>
+                    <path d="M 240 213 L 280 210 L 310 180 L 330 220 L 370 205 L 420 215 L 480 210" fill="none" stroke="#D21319" stroke-width="1.8"/>
+                    <circle cx="310" cy="180" r="3" fill="#D21319"/>
+                    <path d="M 460 110 L 460 315 L 400 315" fill="none" stroke="#2ECC71" stroke-width="2" stroke-dasharray="6 3"/>
+                    <polygon points="400,311 390,315 400,319" fill="#2ECC71"/>
+                    <text x="300" y="319" font-family="monospace" font-size="10" fill="#2ECC71" letter-spacing="1">EGRESS ROUTE</text>
+                    <rect x="65" y="300" width="100" height="26" rx="3" fill="#1B1E4A" stroke="#2ECC71" stroke-width="0.8"/>
+                    <circle cx="80" cy="313" r="4" fill="#2ECC71"/>
+                    <text x="92" y="317" font-family="monospace" font-size="9" fill="#2ECC71">MAIN EXIT</text>
+                    <rect x="390" y="55" width="105" height="20" rx="10" fill="#13163A" stroke="#D21319" stroke-width="0.8"/>
+                    <circle cx="402" cy="65" r="3" fill="#D21319"/>
+                    <text x="412" y="69" font-family="monospace" font-size="8" fill="#F2F0E8" letter-spacing="1">LIVE TELEMETRY</text>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                  <span class="project-card__number">001</span>
+                  <span style="display:inline-flex;align-items:center;gap:4px;font-size:0.68rem;letter-spacing:0.06em;color:var(--color-crimson);text-transform:uppercase;font-weight:600;">Live Project ↗</span>
+                </div>
+                <span class="project-card__category">Smart Systems &amp; IoT</span>
+                <h2 class="project-card__name">Smart Evac Command</h2>
+                <p class="project-card__desc">We built an entire smart evacuation system for the entire building which tracks the building evacuation status continuously in real time. Features multi-floor monitoring, live sensor telemetry trend analysis, floor state distribution, and emergency command controls.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 02 Meridian -->
+          <div class="reveal reveal--delay-1" data-category="brand-identity">
+            <a href="#" class="project-card" aria-label="View Meridian – Brand Identity project">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#13163A"/>
+                    <rect x="60" y="60" width="240" height="300" fill="#1B1E4A"/>
+                    <rect x="60" y="60" width="3" height="300" fill="#D21319"/>
+                    <line x1="60" y1="210" x2="300" y2="210" stroke="rgba(175,174,162,0.2)" stroke-width="1"/>
+                    <circle cx="420" cy="210" r="100" stroke="rgba(175,174,162,0.1)" stroke-width="1"/>
+                    <circle cx="420" cy="210" r="60" fill="rgba(27,30,74,0.7)"/>
+                    <path d="M 420 110 A 100 100 0 0 1 520 210" stroke="#D21319" stroke-width="1.5" fill="none"/>
+                    <rect x="380" y="80" width="80" height="1" fill="rgba(175,174,162,0.25)"/>
+                    <rect x="460" y="80" width="1" height="80" fill="rgba(175,174,162,0.25)"/>
+                    <circle cx="140" cy="300" r="3" fill="#D21319" opacity="0.8"/>
+                    <line x1="300" y1="60" x2="560" y2="360" stroke="rgba(175,174,162,0.04)" stroke-width="1"/>
+                    <rect x="60" y="350" width="240" height="1" fill="rgba(175,174,162,0.15)"/>
+                    <rect x="60" y="360" width="160" height="1" fill="rgba(175,174,162,0.1)"/>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <span class="project-card__number">002</span>
+                <span class="project-card__category">Brand Identity</span>
+                <h2 class="project-card__name">Meridian</h2>
+                <p class="project-card__desc">A comprehensive visual identity for an international architecture firm — encompassing mark, typography system, and brand standards.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 02 Crestline -->
+          <div class="reveal reveal--delay-1" data-category="ecommerce">
+            <a href="#" class="project-card" aria-label="View Crestline – E-commerce project">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#1B1E4A"/>
+                    <rect x="0" y="0" width="280" height="420" fill="#13163A"/>
+                    <rect x="280" y="0" width="280" height="420" fill="#1B1E4A"/>
+                    <line x1="280" y1="0" x2="280" y2="420" stroke="rgba(175,174,162,0.1)" stroke-width="1"/>
+                    <rect x="40" y="80" width="200" height="260" stroke="rgba(175,174,162,0.12)" stroke-width="1" fill="none"/>
+                    <rect x="60" y="180" width="160" height="1" fill="rgba(175,174,162,0.3)"/>
+                    <rect x="60" y="196" width="100" height="1" fill="rgba(175,174,162,0.2)"/>
+                    <circle cx="420" cy="140" r="80" stroke="rgba(175,174,162,0.08)" stroke-width="1" fill="none"/>
+                    <rect x="360" y="250" width="120" height="80" fill="rgba(27,30,74,0.9)"/>
+                    <rect x="360" y="250" width="3" height="80" fill="#D21319"/>
+                    <rect x="360" y="316" width="120" height="1" fill="rgba(175,174,162,0.15)"/>
+                    <rect x="360" y="326" width="80" height="1" fill="rgba(175,174,162,0.1)"/>
+                    <circle cx="140" cy="130" r="30" fill="rgba(175,174,162,0.06)"/>
+                    <circle cx="140" cy="130" r="4" fill="rgba(175,174,162,0.4)"/>
+                    <line x1="40" y1="370" x2="520" y2="370" stroke="rgba(175,174,162,0.06)" stroke-width="1"/>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <span class="project-card__number">003</span>
+                <span class="project-card__category">E-commerce</span>
+                <h2 class="project-card__name">Crestline</h2>
+                <p class="project-card__desc">A bespoke luxury e-commerce platform with editorial product presentation and a refined checkout experience.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 04 Solance -->
+          <div class="reveal" data-category="digital-strategy">
+            <a href="#" class="project-card" aria-label="View Solance – Digital Strategy project">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#13163A"/>
+                    <circle cx="280" cy="210" r="180" stroke="rgba(175,174,162,0.07)" stroke-width="1"/>
+                    <circle cx="280" cy="210" r="120" stroke="rgba(175,174,162,0.1)" stroke-width="1"/>
+                    <circle cx="280" cy="210" r="60" stroke="rgba(175,174,162,0.15)" stroke-width="1"/>
+                    <circle cx="280" cy="210" r="20" fill="#1B1E4A"/>
+                    <path d="M 280 90 A 120 120 0 0 1 400 210" stroke="#D21319" stroke-width="2" fill="none"/>
+                    <path d="M 280 50 A 160 160 0 0 1 440 210" stroke="rgba(210,19,25,0.3)" stroke-width="1" fill="none"/>
+                    <line x1="280" y1="30" x2="280" y2="390" stroke="rgba(175,174,162,0.05)" stroke-width="1"/>
+                    <line x1="60" y1="210" x2="500" y2="210" stroke="rgba(175,174,162,0.05)" stroke-width="1"/>
+                    <circle cx="280" cy="90" r="3" fill="rgba(175,174,162,0.6)"/>
+                    <circle cx="400" cy="210" r="3" fill="rgba(175,174,162,0.6)"/>
+                    <circle cx="280" cy="330" r="3" fill="rgba(175,174,162,0.6)"/>
+                    <circle cx="160" cy="210" r="3" fill="rgba(175,174,162,0.6)"/>
+                    <rect x="40" y="40" width="480" height="340" stroke="rgba(175,174,162,0.04)" stroke-width="1" fill="none"/>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <span class="project-card__number">004</span>
+                <span class="project-card__category">Digital Strategy</span>
+                <h2 class="project-card__name">Solance</h2>
+                <p class="project-card__desc">Strategic repositioning and digital growth for a premium wellness brand entering competitive new markets.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 05 Apex Bureau -->
+          <div class="reveal reveal--delay-1" data-category="web-design">
+            <a href="#" class="project-card" aria-label="View Apex Bureau – Web Design project">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#1B1E4A"/>
+                    <!-- Grid structure suggesting a website layout -->
+                    <rect x="40" y="60" width="480" height="300" rx="2" stroke="rgba(175,174,162,0.08)" stroke-width="1" fill="none"/>
+                    <!-- Nav bar suggestion -->
+                    <rect x="40" y="60" width="480" height="44" fill="rgba(19,22,58,0.9)"/>
+                    <rect x="60" y="78" width="60" height="8" rx="2" fill="rgba(175,174,162,0.4)"/>
+                    <rect x="380" y="78" width="40" height="8" rx="2" fill="rgba(175,174,162,0.15)"/>
+                    <rect x="430" y="78" width="40" height="8" rx="2" fill="rgba(175,174,162,0.15)"/>
+                    <!-- Hero area -->
+                    <rect x="60" y="130" width="300" height="16" rx="2" fill="rgba(175,174,162,0.25)"/>
+                    <rect x="60" y="155" width="220" height="10" rx="2" fill="rgba(175,174,162,0.12)"/>
+                    <rect x="60" y="172" width="240" height="10" rx="2" fill="rgba(175,174,162,0.12)"/>
+                    <rect x="60" y="200" width="80" height="28" rx="14" fill="#D21319"/>
+                    <rect x="60" y="200" width="80" height="28" rx="14" fill="rgba(210,19,25,0.9)"/>
+                    <!-- Right image block -->
+                    <rect x="340" y="115" width="160" height="180" rx="2" fill="rgba(19,22,58,0.8)"/>
+                    <circle cx="420" cy="205" r="50" stroke="rgba(175,174,162,0.1)" stroke-width="1"/>
+                    <circle cx="420" cy="205" r="25" fill="rgba(27,30,74,0.9)"/>
+                    <!-- Footer row -->
+                    <rect x="60" y="310" width="420" height="1" fill="rgba(175,174,162,0.1)"/>
+                    <rect x="60" y="322" width="80" height="6" rx="2" fill="rgba(175,174,162,0.15)"/>
+                    <rect x="400" y="322" width="80" height="6" rx="2" fill="rgba(175,174,162,0.1)"/>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <span class="project-card__number">005</span>
+                <span class="project-card__category">Web Design</span>
+                <h2 class="project-card__name">Apex Bureau</h2>
+                <p class="project-card__desc">A commanding digital presence for a professional services firm, balancing authority with approachability.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 06 Verdant -->
+          <div class="reveal" data-category="brand-identity">
+            <a href="#" class="project-card" aria-label="View Verdant – Brand Identity project">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#13163A"/>
+                    <!-- Organic curves suggesting natural brand -->
+                    <path d="M 100 420 Q 200 200 280 210 Q 360 220 460 0" stroke="rgba(175,174,162,0.08)" stroke-width="1" fill="none"/>
+                    <path d="M 60 420 Q 180 180 280 190 Q 380 200 500 0" stroke="rgba(175,174,162,0.05)" stroke-width="1" fill="none"/>
+                    <!-- Central geometric mark -->
+                    <polygon points="280,80 360,240 200,240" stroke="rgba(175,174,162,0.2)" stroke-width="1" fill="rgba(27,30,74,0.5)"/>
+                    <polygon points="280,110 340,225 220,225" stroke="rgba(175,174,162,0.1)" stroke-width="1" fill="rgba(19,22,58,0.8)"/>
+                    <!-- Crimson apex dot -->
+                    <circle cx="280" cy="80" r="4" fill="#D21319"/>
+                    <!-- Lower rule lines -->
+                    <rect x="100" y="290" width="360" height="1" fill="rgba(175,174,162,0.15)"/>
+                    <rect x="160" y="306" width="240" height="1" fill="rgba(175,174,162,0.1)"/>
+                    <rect x="200" y="322" width="160" height="1" fill="rgba(175,174,162,0.07)"/>
+                    <!-- Corner details -->
+                    <rect x="40" y="40" width="40" height="1" fill="rgba(175,174,162,0.2)"/>
+                    <rect x="40" y="40" width="1" height="40" fill="rgba(175,174,162,0.2)"/>
+                    <rect x="480" y="40" width="40" height="1" fill="rgba(175,174,162,0.2)"/>
+                    <rect x="519" y="40" width="1" height="40" fill="rgba(175,174,162,0.2)"/>
+                    <!-- Vertical rhythm lines -->
+                    <rect x="190" y="80" width="1" height="160" fill="rgba(175,174,162,0.06)"/>
+                    <rect x="370" y="80" width="1" height="160" fill="rgba(175,174,162,0.06)"/>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <span class="project-card__number">006</span>
+                <span class="project-card__category">Brand Identity</span>
+                <h2 class="project-card__name">Verdant</h2>
+                <p class="project-card__desc">A refined brand identity for a sustainable goods company — grounded in honesty, elevated by craft.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 07 Omnis -->
+          <div class="reveal reveal--delay-1" data-category="ecommerce">
+            <a href="#" class="project-card" aria-label="View Omnis – E-commerce project">
+              <div class="project-card__visual">
+                <div class="project-card__placeholder">
+                  <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                    <rect width="560" height="420" fill="#1B1E4A"/>
+                    <!-- Abstract product grid -->
+                    <rect x="40" y="40" width="220" height="160" fill="#13163A"/>
+                    <rect x="280" y="40" width="240" height="160" fill="#13163A"/>
+                    <rect x="40" y="220" width="240" height="160" fill="#13163A"/>
+                    <rect x="300" y="220" width="220" height="160" fill="#13163A"/>
+                    <!-- Gap lines -->
+                    <rect x="260" y="40" width="20" height="340" fill="#1B1E4A"/>
+                    <rect x="40" y="200" width="480" height="20" fill="#1B1E4A"/>
+                    <!-- Abstract product silhouettes (circles and rects within cells) -->
+                    <circle cx="150" cy="120" r="45" stroke="rgba(175,174,162,0.15)" stroke-width="1" fill="none"/>
+                    <circle cx="150" cy="120" r="20" fill="rgba(175,174,162,0.08)"/>
+                    <rect x="320" y="80" width="160" height="80" rx="2" stroke="rgba(175,174,162,0.1)" stroke-width="1" fill="none"/>
+                    <rect x="340" y="100" width="60" height="40" fill="rgba(175,174,162,0.06)"/>
+                    <!-- Crimson tag accent top-right -->
+                    <rect x="400" y="80" width="40" height="16" rx="2" fill="rgba(210,19,25,0.8)"/>
+                    <!-- Bottom cells -->
+                    <circle cx="160" cy="300" r="55" stroke="rgba(175,174,162,0.08)" stroke-width="1" fill="none"/>
+                    <rect x="320" y="250" width="180" height="100" rx="2" stroke="rgba(175,174,162,0.1)" stroke-width="1" fill="none"/>
+                    <rect x="320" y="310" width="180" height="1" fill="rgba(175,174,162,0.2)"/>
+                    <rect x="320" y="322" width="120" height="1" fill="rgba(175,174,162,0.12)"/>
+                    <!-- Stone dot accent -->
+                    <circle cx="410" cy="300" r="3" fill="rgba(175,174,162,0.5)"/>
+                  </svg>
+                </div>
+                <div class="project-card__overlay"></div>
+              </div>
+              <div class="project-card__info">
+                <span class="project-card__number">007</span>
+                <span class="project-card__category">E-commerce</span>
+                <h2 class="project-card__name">Omnis</h2>
+                <p class="project-card__desc">A lifestyle brand store that positions products through imagery-first editorial design and seamless discovery.</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ CTA SECTION ═══════════════ -->
+    <section class="section section--dark section--xl cta-section" aria-labelledby="portfolio-cta-title">
+      <div class="cta-section__bg-text" aria-hidden="true">KLYRIVEN</div>
+      <div class="container">
+        <div class="cta-section__content reveal">
+          <h2 class="cta-section__title" id="portfolio-cta-title">Ready to build something <em>remarkable?</em></h2>
+          <p class="cta-section__body">
+            Tell us about your project. We'll respond within one business day with initial thinking — no obligation, no boilerplate.
+          </p>
+          <div class="cta-section__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              Start a project
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="services.html" class="btn btn--secondary btn--lg">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════ FOOTER ════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__wordmark" aria-label="KLYRIVEN – home">
+            KLYRIVEN<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#D21319;margin-left:2px;vertical-align:super;"></span>
+          </a>
+          <p class="footer__tagline">A premium digital partner combining design, technology, and strategy.</p>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__nav" role="list">
+            <li><a href="portfolio.html" class="footer__nav-link">Work</a></li>
+            <li><a href="services.html" class="footer__nav-link">Services</a></li>
+            <li><a href="process.html" class="footer__nav-link">Process</a></li>
+            <li><a href="about.html" class="footer__nav-link">About</a></li>
+            <li><a href="contact.html" class="footer__nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Get in touch</p>
+          <p class="footer__contact-item">
+            <a href="mailto:hello@klyriven.com">hello@klyriven.com</a>
+          </p>
+          <p class="footer__contact-item">
+            We respond to all enquiries within 1 business day.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 KLYRIVEN. All rights reserved.</p>
+        <ul class="footer__legal" role="list">
+          <li><a href="#" class="footer__legal-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__legal-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

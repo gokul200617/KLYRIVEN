@@ -1,0 +1,135 @@
+/* ============================================================
+   KLYRIVEN — LAYOUT
+   Container, grid, and structural primitives
+   ============================================================ */
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-default);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--wide {
+  max-width: var(--container-wide);
+}
+
+.container--max {
+  max-width: var(--container-max);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.container--xs {
+  max-width: var(--container-xs);
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  gap: var(--col-gap);
+}
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.grid--asymm-left {
+  grid-template-columns: 1fr 1.618fr;
+}
+
+.grid--asymm-right {
+  grid-template-columns: 1.618fr 1fr;
+}
+
+/* ── Flex utilities ───────────────────────────────────────── */
+.flex { display: flex; }
+.flex--center { align-items: center; justify-content: center; }
+.flex--between { align-items: center; justify-content: space-between; }
+.flex--start { align-items: flex-start; }
+.flex--col { flex-direction: column; }
+.flex--wrap { flex-wrap: wrap; }
+.flex--gap-sm { gap: var(--space-4); }
+.flex--gap-md { gap: var(--space-8); }
+.flex--gap-lg { gap: var(--space-12); }
+
+/* ── Sections ─────────────────────────────────────────────── */
+.section {
+  padding-block: var(--section-md);
+}
+
+.section--sm { padding-block: var(--section-sm); }
+.section--lg { padding-block: var(--section-lg); }
+.section--xl { padding-block: var(--section-xl); }
+
+.section--dark {
+  background-color: var(--color-navy);
+  color: var(--color-cream);
+}
+
+.section--navy-deep {
+  background-color: var(--color-navy-deep);
+  color: var(--color-cream);
+}
+
+.section--stone {
+  background-color: var(--color-cream-warm);
+  color: var(--color-navy);
+}
+
+.section--cream {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+}
+
+/* ── Divider ──────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 0;
+}
+
+.divider--dark {
+  border-top-color: var(--border-dark);
+}
+
+/* ── Sticky nav offset ────────────────────────────────────── */
+.page-content {
+  padding-top: var(--nav-height);
+}
+
+/* ── Overflow clipping ────────────────────────────────────── */
+.overflow-hidden { overflow: hidden; }
+
+/* ── Aspect ratios ────────────────────────────────────────── */
+.aspect-video   { aspect-ratio: 16 / 9; }
+.aspect-square  { aspect-ratio: 1; }
+.aspect-3-2     { aspect-ratio: 3 / 2; }
+.aspect-4-3     { aspect-ratio: 4 / 3; }
+.aspect-portrait { aspect-ratio: 3 / 4; }
+
+/* ── Image fill ───────────────────────────────────────────── */
+.img-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Responsive grid breakpoints ─────────────────────────── */
+@media (max-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .grid--asymm-left,
+  .grid--asymm-right { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 { grid-template-columns: 1fr; }
+}
+

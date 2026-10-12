@@ -1,0 +1,137 @@
+/* ============================================================
+   KLYRIVEN — DESIGN TOKENS
+   The complete design system. Never deviate from these values.
+   ============================================================ */
+
+:root {
+  /* ── Brand Colours ─────────────────────────────────────── */
+  --color-navy:          #1B1E4A;
+  --color-navy-deep:     #13163A;
+  --color-navy-mid:      #22265C;
+  --color-stone:         #AFAEA2;
+  --color-stone-light:   #D4D3CB;
+  --color-stone-muted:   #6E6D64;
+  --color-crimson:       #D21319;
+  --color-crimson-dark:  #A50F14;
+  --color-cream:         #F2F0E8;
+  --color-cream-warm:    #E8E6DC;
+  --color-white:         #FFFFFF;
+
+  /* ── Semantic Colour Aliases ──────────────────────────── */
+  --bg-primary:          var(--color-navy);
+  --bg-surface:          var(--color-cream);
+  --bg-surface-alt:      var(--color-cream-warm);
+  --bg-dark:             var(--color-navy-deep);
+  --text-primary:        var(--color-navy);
+  --text-on-dark:        var(--color-cream);
+  --text-muted:          var(--color-stone-muted);
+  --text-stone:          var(--color-stone);
+  --accent:              var(--color-crimson);
+  --border-subtle:       rgba(175, 174, 162, 0.3);
+  --border-dark:         rgba(242, 240, 232, 0.12);
+
+  /* ── Typography — Families ────────────────────────────── */
+  --font-display:        'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-body:           'Manrope', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ── Typography — Scale (fluid clamp) ─────────────────── */
+  --text-xs:             clamp(0.65rem, 0.6rem + 0.25vw, 0.75rem);
+  --text-sm:             clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-base:           clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+  --text-md:             clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg:             clamp(1.125rem, 1rem + 0.625vw, 1.375rem);
+  --text-xl:             clamp(1.375rem, 1.2rem + 0.875vw, 1.875rem);
+  --text-2xl:            clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem);
+  --text-3xl:            clamp(2.25rem, 1.875rem + 1.875vw, 3.5rem);
+  --text-4xl:            clamp(3rem, 2.5rem + 2.5vw, 5rem);
+  --text-5xl:            clamp(4rem, 3rem + 5vw, 8rem);
+  --text-hero:           clamp(4.5rem, 3rem + 7.5vw, 10rem);
+
+  /* ── Typography — Line Heights ────────────────────────── */
+  --lh-tight:            1.05;
+  --lh-heading:          1.15;
+  --lh-snug:             1.3;
+  --lh-normal:           1.6;
+  --lh-relaxed:          1.75;
+
+  /* ── Typography — Letter Spacing ─────────────────────── */
+  --ls-tight:            -0.03em;
+  --ls-normal:           -0.01em;
+  --ls-wide:             0.05em;
+  --ls-wider:            0.1em;
+  --ls-widest:           0.15em;
+
+  /* ── Typography — Weights ────────────────────────────── */
+  --fw-light:            300;
+  --fw-regular:          400;
+  --fw-medium:           500;
+  --fw-semibold:         600;
+  --fw-bold:             700;
+  --fw-extrabold:        800;
+
+  /* ── Spacing Scale ────────────────────────────────────── */
+  --space-1:             0.25rem;
+  --space-2:             0.5rem;
+  --space-3:             0.75rem;
+  --space-4:             1rem;
+  --space-5:             1.25rem;
+  --space-6:             1.5rem;
+  --space-8:             2rem;
+  --space-10:            2.5rem;
+  --space-12:            3rem;
+  --space-16:            4rem;
+  --space-20:            5rem;
+  --space-24:            6rem;
+  --space-32:            8rem;
+  --space-40:            10rem;
+  --space-48:            12rem;
+
+  /* ── Section Spacing ──────────────────────────────────── */
+  --section-sm:          clamp(3rem, 5vw, 5rem);
+  --section-md:          clamp(5rem, 8vw, 8rem);
+  --section-lg:          clamp(7rem, 12vw, 12rem);
+  --section-xl:          clamp(9rem, 15vw, 16rem);
+
+  /* ── Layout ───────────────────────────────────────────── */
+  --container-max:       1440px;
+  --container-wide:      1280px;
+  --container-default:   1160px;
+  --container-narrow:    820px;
+  --container-xs:        640px;
+  --gutter:              clamp(1.5rem, 5vw, 5rem);
+  --col-gap:             clamp(1rem, 2vw, 2rem);
+
+  /* ── Border Radius ────────────────────────────────────── */
+  --radius-sm:           2px;
+  --radius-md:           4px;
+  --radius-lg:           8px;
+  --radius-xl:           16px;
+  --radius-full:         9999px;
+
+  /* ── Transitions ──────────────────────────────────────── */
+  --ease-out:            cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:         cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:         cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:       150ms;
+  --duration-base:       300ms;
+  --duration-slow:       500ms;
+  --duration-enter:      700ms;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-subtle:       0 1px 3px rgba(27, 30, 74, 0.06), 0 1px 2px rgba(27, 30, 74, 0.04);
+  --shadow-md:           0 4px 16px rgba(27, 30, 74, 0.1), 0 2px 6px rgba(27, 30, 74, 0.06);
+  --shadow-lg:           0 12px 40px rgba(27, 30, 74, 0.14);
+  --shadow-overlay:      0 24px 64px rgba(27, 30, 74, 0.2);
+
+  /* ── Z-index ──────────────────────────────────────────── */
+  --z-base:              0;
+  --z-above:             10;
+  --z-nav:               100;
+  --z-overlay:           200;
+  --z-modal:             300;
+  --z-toast:             400;
+
+  /* ── Nav Height ───────────────────────────────────────── */
+  --nav-height:          72px;
+}
+
