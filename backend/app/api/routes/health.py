@@ -11,9 +11,9 @@ import asyncio
 import logging
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
 
-from app.db.firebase import firestore_dep
+from app.db.firebase import get_firestore, init_error_summary
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,7 @@ API_VERSION = "2.0.0"
 
 
 @router.get("/health", summary="Health check")
-async def health_check(db=Depends(firestore_dep)) -> dict:
+async def health_check() -> dict:
     """Return service health.
 
     - **status**: ``"ok"`` when all subsystems are healthy, ``"degraded"`` otherwise.
@@ -33,8 +33,11 @@ async def health_check(db=Depends(firestore_dep)) -> dict:
     """
     db_status = "unavailable"
     overall_status = "degraded"
+    detail = None
 
     try:
+        db = get_firestore()
+
         def _ping() -> None:
             # Lightweight Firestore round-trip — read at most 1 doc from a
             # sentinel collection that may not even exist (that's fine).
@@ -45,10 +48,14 @@ async def health_check(db=Depends(firestore_dep)) -> dict:
         overall_status = "ok"
     except Exception as exc:
         logger.warning("Health check: Firestore unavailable — %s", exc)
+        detail = init_error_summary(exc)
 
-    return {
+    result = {
         "status": overall_status,
         "database": db_status,
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "version": API_VERSION,
     }
+    if detail:
+        result["database_error"] = detail
+    return result
