@@ -30,6 +30,9 @@ class Settings(BaseSettings):
     # Set FIREBASE_CREDENTIALS_PATH in your .env to an absolute path or a
     # path relative to the directory you launch uvicorn from.
     FIREBASE_CREDENTIALS_PATH: str = "firebase-credentials.json"
+    # For production hosts: paste the full service account JSON as the value
+    # of this env var. Takes priority over FIREBASE_CREDENTIALS_PATH.
+    FIREBASE_CREDENTIALS_JSON: str = ""
 
     # ── CORS ─────────────────────────────────────────────────────────────────
     CORS_ORIGINS: list[str] = ["http://localhost:8000", "http://127.0.0.1:8000"]

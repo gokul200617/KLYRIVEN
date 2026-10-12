@@ -30,7 +30,12 @@ def init_firebase() -> None:
     if _firebase_app is not None:
         return  # already initialised — safe to call multiple times
 
-    cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
+    if settings.FIREBASE_CREDENTIALS_JSON.strip():
+        import json
+
+        cred = credentials.Certificate(json.loads(settings.FIREBASE_CREDENTIALS_JSON))
+    else:
+        cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
     _firebase_app = firebase_admin.initialize_app(cred)
     _db = fb_firestore.client()
     logger.info("Firebase initialised — Firestore client ready")
