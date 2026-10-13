@@ -1,0 +1,91 @@
+╔════════════════════════════════════════════════════════════════╗
+║  EMAIL NOT WORKING? HERE'S EXACTLY WHAT TO DO NOW              ║
+╔════════════════════════════════════════════════════════════════╝
+
+📋 STEP 1: GET ZOHO APP PASSWORD (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open browser → https://mail.zoho.in
+2. Login as: contact.klyriven@zohomail.in
+3. Click gear icon → Security → App Passwords
+4. Click "Generate New Password"
+5. Name it: "KLYRIVEN Backend"
+6. COPY THE PASSWORD (you'll need it in Step 2)
+
+
+📝 STEP 2: UPDATE YOUR .ENV FILE (1 minute)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File location: backend\.env
+
+Find this line:
+   EMAIL_PASSWORD=PASTE_YOUR_ZOHO_APP_PASSWORD_HERE
+
+Replace with:
+   EMAIL_PASSWORD=<paste the password from Step 1>
+
+Save the file.
+
+
+🧪 STEP 3: TEST IT (30 seconds)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open terminal and run:
+
+   cd C:\Users\M354421\Desktop\KLYRIVEN\backend
+   python test_email.py
+
+If successful, you'll see:
+   ✅ SUCCESS! Email sent successfully!
+
+Check contact.klyriven@zohomail.in inbox.
+
+
+🚀 STEP 4: CONFIGURE PRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+On your hosting platform (Render/Railway/Heroku):
+
+1. Go to Environment Variables
+2. Add these:
+
+   EMAIL_ENABLED=true
+   EMAIL_HOST=smtp.zoho.in  
+   EMAIL_PORT=587
+   EMAIL_USERNAME=contact.klyriven@zohomail.in
+   EMAIL_PASSWORD=<same password from Step 1>
+   EMAIL_FROM=contact.klyriven@zohomail.in
+   EMAIL_TO=contact.klyriven@zohomail.in
+
+3. Restart your backend service
+4. Submit a test enquiry on your live site
+5. Check email!
+
+
+❓ COMMON ISSUES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Email credentials missing"
+→ You didn't update the .env file with the app password
+
+"Authentication failed"  
+→ You're using your regular password, not an app password
+→ Go back to Step 1
+
+"Email notifications disabled"
+→ Make sure EMAIL_ENABLED=true (not false)
+
+No errors but no email?
+→ Check spam folder
+→ Wait 1-2 minutes (sometimes delayed)
+
+
+📞 NEED MORE HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+See: backend/QUICK_START_EMAIL.md
+See: backend/EMAIL_SETUP.md
+
+Run test script with errors shown:
+   python test_email.py
+
