@@ -21,6 +21,7 @@ from fastapi import HTTPException, status
 from app.core.security import sanitize_optional, sanitize_string
 from app.models.enquiry import Enquiry
 from app.schemas.enquiry import EnquiryCreate
+from app.services.email_service import send_enquiry_notification
 
 logger = logging.getLogger(__name__)
 
@@ -98,6 +99,11 @@ async def create_enquiry(db, data: EnquiryCreate) -> Enquiry:
         "New enquiry created",
         extra={"enquiry_id": enquiry_id, "service": enquiry.service_interest},
     )
+
+    # ── 4. Send email notification (non-blocking) ─────────────────────────────
+    # Fire-and-forget: don't block the response on email delivery
+    asyncio.create_task(send_enquiry_notification(enquiry))
+
     return enquiry
 
 

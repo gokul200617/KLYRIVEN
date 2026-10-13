@@ -40,6 +40,15 @@ class Settings(BaseSettings):
     # ── Rate limiting ─────────────────────────────────────────────────────────
     RATE_LIMIT_ENQUIRIES: str = "5/minute"
 
+    # ── Email notifications ───────────────────────────────────────────────────
+    EMAIL_ENABLED: bool = False
+    EMAIL_HOST: str = "smtp.zoho.in"
+    EMAIL_PORT: int = 587
+    EMAIL_USERNAME: str = ""
+    EMAIL_PASSWORD: str = ""
+    EMAIL_FROM: str = "contact.klyriven@zohomail.in"
+    EMAIL_TO: str = "contact.klyriven@zohomail.in"
+
     # ── pydantic-settings config ──────────────────────────────────────────────
     model_config = SettingsConfigDict(
         env_file=".env",
