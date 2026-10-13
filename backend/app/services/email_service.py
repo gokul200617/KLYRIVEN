@@ -13,6 +13,7 @@ from email.mime.text import MIMEText
 from typing import Optional
 
 import aiosmtplib
+from aiosmtplib import SMTPAuthenticationError
 
 from app.core.config import settings
 from app.models.enquiry import Enquiry
@@ -170,11 +171,15 @@ async def send_enquiry_notification(enquiry: Enquiry) -> bool:
         True if email sent successfully, False otherwise
     """
     if not settings.EMAIL_ENABLED:
-        logger.debug("Email notifications disabled, skipping")
+        logger.warning("Email notifications disabled (EMAIL_ENABLED=false), skipping")
+        print("⚠️  Email notifications disabled. Set EMAIL_ENABLED=true in .env")
         return False
 
     if not settings.EMAIL_USERNAME or not settings.EMAIL_PASSWORD:
-        logger.warning("Email credentials not configured, skipping notification")
+        logger.error("Email credentials not configured, skipping notification")
+        print(f"❌ Email credentials missing:")
+        print(f"   EMAIL_USERNAME: {'SET' if settings.EMAIL_USERNAME else 'NOT SET'}")
+        print(f"   EMAIL_PASSWORD: {'SET' if settings.EMAIL_PASSWORD else 'NOT SET'}")
         return False
 
     try:
@@ -242,12 +247,25 @@ Status: {enquiry.status.upper()}
         )
         return True
 
+    except aiosmtplib.SMTPAuthenticationError as e:
+        logger.error(
+            f"SMTP authentication failed: {e}",
+            extra={"enquiry_id": enquiry.id},
+            exc_info=True
+        )
+        print(f"❌ SMTP Authentication Error: {e}")
+        print(f"   Check your EMAIL_USERNAME and EMAIL_PASSWORD")
+        print(f"   Make sure you're using an app password from Zoho Mail")
+        return False
+
     except aiosmtplib.SMTPException as e:
         logger.error(
             f"SMTP error sending enquiry notification: {e}",
             extra={"enquiry_id": enquiry.id},
             exc_info=True
         )
+        print(f"❌ SMTP Error: {e}")
+        print(f"   Host: {settings.EMAIL_HOST}:{settings.EMAIL_PORT}")
         return False
 
     except Exception as e:
@@ -256,4 +274,7 @@ Status: {enquiry.status.upper()}
             extra={"enquiry_id": enquiry.id},
             exc_info=True
         )
+        print(f"❌ Unexpected Error: {e}")
+        import traceback
+        traceback.print_exc()
         return False
