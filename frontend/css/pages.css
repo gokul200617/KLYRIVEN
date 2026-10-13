@@ -9,13 +9,14 @@
 
 .hero {
   position: relative;
-  min-height: 110svh;
+  min-height: 120svh;
   background-color: var(--color-navy);
   color: var(--color-cream);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  padding-top: calc(var(--nav-height) + var(--space-16));
   padding-bottom: var(--section-md);
 }
 
