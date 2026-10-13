@@ -233,8 +233,8 @@ Status: {enquiry.status.upper()}
             port=settings.EMAIL_PORT,
             username=settings.EMAIL_USERNAME,
             password=settings.EMAIL_PASSWORD,
-            use_tls=True,
-            timeout=10,
+            start_tls=True,
+            timeout=15,
         )
 
         logger.info(
