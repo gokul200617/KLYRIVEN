@@ -3,5 +3,5 @@ Allow: /
 Disallow: /api/
 Disallow: /.env
 
-Sitemap: https://klyriven.com/sitemap.xml
+Sitemap: https://klyriven.onrender.com/sitemap.xml
 
